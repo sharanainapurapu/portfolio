@@ -101,6 +101,12 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
+nav img.logo {
+  width: 78px;
+  position: absolute;
+  top: 5px;
+}
+
 .burger-menu {
   color: var(--primary-color);
   font-size: 2rem;
@@ -111,22 +117,53 @@ nav ul li {
 }
 /* Navbar ends */
 
-/* Hero section */
-.hero {
+/* parallax section */
+.parallax-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
   max-width: 68.75rem;
   margin: auto;
+  overflow: hidden;
 }
 
-.hero img {
+#scene {
+  position: relative;
+}
+
+.parallax {
+  position: absolute;
+}
+
+.parallax-container .parallax-img {
   height: 37.5rem;
   width: 37.5rem;
 }
 
-.bio {
+.parallax-container .semi_circle {
+  top: calc(-50% + 150px) !important;
+}
+
+.parallax-container .clock {
+  left: 100% !important;
+  top: calc(25% - 70px) !important;
+}
+.parallax-container .desk {
+  left: 130% !important;
+  top: calc(100% - 170px) !important;
+}
+
+.parallax-container .tree_stand {
+  top: calc(100% - 290px) !important;
+}
+
+.parallax-container .bush {
+  left: 90% !important;
+  top: calc(100% - 160px) !important;
+}
+
+/* .bio {
   width: 25rem;
   padding: 0.625rem;
   border-radius: 6px;
@@ -140,8 +177,22 @@ nav ul li {
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+} */
+
+.my-bio .name {
+  font-size: 3.4rem;
+  color: #4c517a;
+  margin-bottom: 0.5rem;
+  /* text-shadow: 2px 4px #dde0ff; */
+  /* background-color: #daddf9; */
+  /* padding: 0 1rem; */
 }
-/* Hero section ends */
+
+.my-bio .bio-message {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+/* parallax section ends */
 
 /* More about */
 .more-about {
@@ -153,7 +204,7 @@ nav ul li {
   gap: 0.5rem;
   max-width: 68.75rem;
   flex-direction: column;
-  margin: auto;  
+  margin: auto;
 }
 
 .more-about h2 {
@@ -381,14 +432,22 @@ footer {
     transform: translateX(0);
   }
 
-  .hero {
+  .parallax-container {
     margin-top: -4rem;
     flex-direction: column;
     gap: 0;
   }
 
-  .hero img {
-    height: 37.5rem;
+  .parallax {
+    display: none !important;
+  }
+
+  .parallax.parallax-img, .parallax.bush {
+    display: block !important;
+  }
+
+  .parallax.parallax-img {
+    height: auto;
     width: 30rem;
   }
 
@@ -425,11 +484,20 @@ footer {
   .contact-form-container {
     max-width: 23.75rem;
   }
+
+  .my-bio {
+    margin-top: 4rem;
+    text-align: center;
+  }  
+
+  .my-bio .name {
+    font-size: 3rem;
+  }  
 }
 
 @media screen and (max-width: 420px) {
-  .hero img {
-    height: 37.5rem;
+  .parallax-container .parallax-img {
+    height: auto;
     width: 23rem;
   }
 

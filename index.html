@@ -26,7 +26,9 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <a href="#about" class="nav-link"><h1>SHARAN AINAPURAPU</h1></a>
+      <a href="#about" class="nav-link">
+        <img src="assets/images/logo.svg" alt="logo" class="logo" />
+      </a>
       <ul class="navigation">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -39,25 +41,68 @@
       </button>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-      <img
-        src="assets/images/wfh_1.svg"
-        alt="jane-doe"
-        loading="lazy"
-        class="hero-img"
-      />
+    <!-- parallax Section -->
+    <section class="parallax-container" id="about">
+      <div class="images" id="scene">       
+        <object
+          data-depth="0.9"
+          id="my-svg"
+          data="assets/images/wfh.svg"
+          loading="lazy"
+          class="parallax parallax-img"
+          type="image/svg+xml"></object>
+          <object
+          data-depth="0.2"
+          data="assets/images/circle.svg"
+          loading="lazy"
+          class="parallax semi_circle"
+          type="image/svg+xml"
+          width="300"
+          height="auto"></object>           
+        <object
+          data-depth="0.5"
+          data="assets/images/clock.svg"
+          loading="lazy"
+          class="parallax clock"
+          type="image/svg+xml"
+          width="70"
+          height="auto"></object>
+        <object
+          data-depth="0.3"
+          data="assets/images/desk.svg"
+          loading="lazy"
+          class="parallax desk"
+          type="image/svg+xml"
+          width="auto"
+          height="150"></object>
+        <object
+          data-depth="1"
+          data="assets/images/tree_stand.svg"
+          loading="lazy"
+          class="parallax tree_stand"
+          type="image/svg+xml"
+          width="auto"
+          height="250"></object>
+        <object
+          data-depth="1"
+          data="assets/images/bush.svg"
+          loading="lazy"
+          class="parallax bush"
+          type="image/svg+xml"
+          width="auto"
+          height="140"></object>        
+      </div>
       <!-- <img
         src="assets/images/myimage.png"
         alt="jane-doe"
         loading="lazy"
-        class="hero-img"
+        class="parallax-img"
       />       -->
-      <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About Me</h2>
-        <p class="bio-text">
-          Sharan Ainapurapu has 8+ years (with Sirius) of diverse experience as a software developer with an amalgamation of knack and skillset of a UI development. He is technicalized at single page and hybrid mobile application development and delivers par excellence. 
-        </p>
+      <div class="my-bio" id="my-bio">
+        <!-- bio animate__animated animate__shakeX -->
+        <p class="bio-message">Hi, my name is</p>
+        <h1 class="name">SHARAN</h1>
+        <h7 class="bio-text">Web developer | Mobile application developer</h7>
       </div>
     </section>
 
@@ -65,10 +110,16 @@
     <section class="more-about">
       <h2>More About Me</h2>
       <p>
-        Sharan Ainapurapu has 8+ years (with Sirius) of diverse experience as a software developer with an amalgamation of knack and skillset of a UI development. He is technicalized at single page and hybrid mobile application development and delivers par excellence.
+        He is technicalized at single page and hybrid mobile
+        application development and delivers par excellence.
       </p>
       <p>
-        He is a go-getter and evolves with the team by keeping abreast, mentoring juniors with learning as an integral habit. On the professional front, he pioneered multiple development accelerators and daily essential applications uncompromising on coding standards. His roles and responsibilities in the past are the testimonies of his fidelity.
+        He is a go-getter and evolves with the team by keeping abreast,
+        mentoring juniors with learning as an integral habit. On the
+        professional front, he pioneered multiple development accelerators and
+        daily essential applications uncompromising on coding standards. His
+        roles and responsibilities in the past are the testimonies of his
+        fidelity.
       </p>
     </section>
 
@@ -232,7 +283,7 @@
           alt="Linkedin"
           loading="lazy"
           class="socicon"
-      /></a>      
+      /></a>
       <a href="https://twitter.com/thisissharan" target="_blank"
         ><img
           src="assets/icons/icons8-twitter-circled.gif"
@@ -263,10 +314,6 @@
         >
       </p>
     </footer>
-
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
-
     <!-- Ion icons scripts -->
     <script
       type="module"
@@ -276,5 +323,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
+    ></script>
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

@@ -29,3 +29,10 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+window.onload = function() {
+  const scene = document.getElementById('scene');
+  const parallaxInstance = new Parallax(scene, {
+    selector: '.parallax'
+  });
+}
